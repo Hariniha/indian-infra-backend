@@ -12,7 +12,8 @@
     "seed": "node scripts/seed.js",
     "seed:dev": "node scripts/seedDev.js",
     "migrate": "node scripts/migrate.js",
-    "db:reset": "node scripts/resetDatabase.js"
+    "db:reset": "node scripts/resetDatabase.js",
+    "verify": "node scripts/verifyConfig.js"
   },
   "keywords": [
     "blockchain",

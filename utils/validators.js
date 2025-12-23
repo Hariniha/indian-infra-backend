@@ -23,7 +23,7 @@ exports.validateUserRegistration = [
   body('walletAddress')
     .notEmpty()
     .withMessage('Wallet address is required')
-    .isEthereumAddress()
+    .matches(/^0x[a-fA-F0-9]{40}$/)
     .withMessage('Invalid Ethereum address'),
   body('role')
     .notEmpty()
@@ -131,7 +131,7 @@ exports.validateWalletAddress = [
   body('walletAddress')
     .notEmpty()
     .withMessage('Wallet address is required')
-    .isEthereumAddress()
+    .matches(/^0x[a-fA-F0-9]{40}$/)
     .withMessage('Invalid Ethereum address'),
   this.handleValidationErrors,
 ];
